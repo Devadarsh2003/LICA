@@ -1,0 +1,120 @@
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 320px;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-poster {
+    position: relative;
+    width: 100%;
+    height: 70%;
+  }
+  
+  .product-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .product-card:hover .product-overlay {
+    opacity: 1;
+  }
+  
+  .favorite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  
+  .favorite-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .favorite-btn.active {
+    color: #ff4757;
+  }
+  
+  .product-info {
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 40%;
+  }
+  
+  .product-info h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .product-info p {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 1200px) {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .favorite-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+    }
+  }

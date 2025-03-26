@@ -1,0 +1,72 @@
+.home {
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .search-form {
+    position: relative;
+    max-width: 1300px; /* Increase width */
+    margin: 3rem auto 1.5rem;
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.search-input {
+    flex: 1;
+    padding: 1rem 1.5rem; /* Increase padding for bigger size */
+    font-size: 1.2rem; /* Increase font size */
+    min-height: 50px; /* Increase height */
+    border-radius: 50px;
+    width: 450px;
+}
+
+
+
+  .search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #666;
+  }
+  
+  .search-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #e50914;
+    color: white;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    min-height: 50px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+}
+  
+  .search-button:hover {
+    background-color: #f40612;
+  }
+  
+  
+  @media (max-width: 639px) {
+    .home {
+      padding: 1rem 0;
+    }
+  
+    .search-form {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+ 
+

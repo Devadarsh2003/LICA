@@ -1,0 +1,139 @@
+/* Chat Container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 80vh;
+    border-radius: 10px;
+    background: #1e1e1e;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Box */
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #1e1e1e;
+}
+
+/* Custom Scrollbar */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+/* Message Wrapper */
+.message-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+    align-items: flex-start;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.4;
+    width: fit-content;
+}
+
+/* User (Right-aligned, Blue Background) */
+.user {
+    justify-content: flex-end;
+}
+
+.user .chat-bubble {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Bot (Left-aligned, Darker Blue) */
+.bot {
+    justify-content: flex-start;
+}
+
+.bot .chat-bubble {
+    background: #0056b3;
+    color: white;
+    align-self: flex-start;
+}
+
+/* Input Area */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid #444;
+}
+
+/* Input Field */
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Microphone & Send Buttons */
+.mic-btn,
+.send-btn {
+    background: #007bff;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease-in-out;
+    font-size: 1.2rem;
+}
+
+.mic-btn.listening {
+    background: red;
+}
+
+.mic-btn:hover,
+.send-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 90%;
+        height: 70vh;
+    }
+
+    .chat-bubble {
+        max-width: 75%;
+        font-size: 0.9rem;
+    }
+}
