@@ -5,3 +5,9 @@ python-dotenv
 google-generativeai
 python-multipart
 pydub
+sqlalchemy
+psycopg2-binary
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+requests

@@ -14,19 +14,22 @@ API_KEY = os.getenv("SCRAPER_API_KEY")
 def get_top_products(query):
     # Define the system and user messages
     messages = [
-        {
-            "role": "system",
-            "content": (
-                "You are an artificial intelligence assistant and need to provide a list "
-                "of the best 5 products matching the user's query. The product names must "
-                "be enclosed in *<product name>*."
-            ),
-        },
-        {
-            "role": "user",
-            "content": query,
-        },
-    ]
+    {
+        "role": "system",
+        "content": (
+            "You are an AI product recommendation assistant. Your task is to provide a list "
+            "of the **top 5 best-matching products** based on the user's query. "
+            "Interpret vague or ambiguous terms correctly (e.g., 'cycles' should refer to 'bicycles'). "
+            "Ensure that each product name is enclosed in *<product name>*. "
+            "Focus only on relevant and high-quality products."
+        ),
+    },
+    {
+        "role": "user",
+        "content": query,
+    },
+]
+
 
     # Check if the API key is set
     # if "PERPLEXITY_API_KEY" not in os.environ:
@@ -145,5 +148,6 @@ if __name__ == "__main__":
     user_query = input("Enter your query: ")
     
     # Pass the query to the function
-    product_details = fetch_amazon_product_details(user_query)
+    # product_details = fetch_amazon_product_details(user_query)
+    product_details = get_top_products(user_query)
     print(json.dumps(product_details, indent=4))

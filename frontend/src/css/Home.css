@@ -1,12 +1,14 @@
+
 .home {
-    padding: 2rem 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
+  padding: 0.5rem 0;  /* Reduce top & bottom padding */
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  top: -150px;
+}
   .search-form {
     position: relative;
-    max-width: 1300px; /* Increase width */
+    max-width: 1600px; /* Increase width */
     margin: 3rem auto 1.5rem;
     display: flex;
     gap: 1rem;
@@ -19,8 +21,8 @@
     padding: 1rem 1.5rem; /* Increase padding for bigger size */
     font-size: 1.2rem; /* Increase font size */
     min-height: 50px; /* Increase height */
-    border-radius: 50px;
-    width: 450px;
+    border-radius: 45px;
+    width: 500px;
 }
 
 
@@ -42,11 +44,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 125px;
+    width: 100px;
 }
   
   .search-button:hover {
     background-color: #f40612;
+  }
+  
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 150px; /* Increased for better visibility */
+    /*background-color: #1e1e1e; /* Dark theme */
+    /*color: #fff;*/
+    padding: 20px;
+  }
+  
+  .header-container h2 {
+    font-size: 5rem; /* Bigger size */
+    font-weight: 900; /* Maximum boldness */
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 2px; /* Slight spacing for emphasis */
+  }
+  
+  .header-container p {
+    font-size: 1rem; /* Smaller text */
+    font-weight: 300; /* Lighter to contrast with h2 */
+    max-width: 80%;
+    margin-top: 5px;
+    opacity: 0.5; /* Slight transparency for subtle effect */
   }
   
   
